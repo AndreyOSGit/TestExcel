@@ -31,17 +31,29 @@ for i in range(0, CforTasks.__len__()):
                 # print(CforTasks)
             listCover.append(cshki)
             cshki = ''
+
+print('listCover')
 print(listCover)
 a = list(set(listCover))
-out = []
+out = [col_with_c_len+1]
 print('a')
 print(a)
 # sheet.cell(i, cell_number_with_C).value)
-for i in range(0,col_with_c_len-1):
+# for i in range(0,col_with_c_len-1):
+#     for x in a:
+#         if (x.__contains__ (CforTasks[i])):
+#             out[i] = ('Покрыть проверки: ' + x)
+#             break
+# print('out')
+# print(out)
+
+
+for c in CforTasks:
     for x in a:
-        if (x.__contains__ (CforTasks[i])):
-            out.append('Покрыть проверки: ' + x)
+        if x.__contains__(c):
+            out.append(str(x))
+            break
 print('out')
 print(out)
-# for i in range(1,col_with_c_len):
-#     sheet.update_cell(i, cell_new, out[i])
+for i in range(1,col_with_c_len):
+    sheet.update_cell(i, cell_new, out[i])
