@@ -19,3 +19,4 @@ for i in range(1,col_with_c_len):
     if sheet.cell(i, cell_number_with_C).value.__contains__('C') or sheet.cell(i, cell_number_with_C).value.__contains__('c'):
         # if sheet.cell(i, cell_check).value == '':
         sheet.update_cell(i,cell_new,'Покрыть проверки: ' + cshki )
+
